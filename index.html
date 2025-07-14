@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Period Phase & Mood Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Period Phase & Mood Detector</h1>
+    <form id="cycleForm">
+      <label for="lastPeriod">Start Date of Last Period:</label>
+      <input type="date" id="lastPeriod" required />
+
+      <label for="cycleLength">Average Cycle Length (in days):</label>
+      <input type="number" id="cycleLength" value="28" min="21" max="35" required />
+
+      <button type="submit">Check Mood</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>Result:</h2>
+      <p><strong>Current Phase:</strong> <span id="phase"></span></p>
+      <p><strong>Mood:</strong> <span id="mood"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
